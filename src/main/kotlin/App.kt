@@ -53,7 +53,7 @@ class MainMenu(private val navigator: Navigator) : Menu() {
         while (input.isBlank()) {
             input = readln()
             if (input.isBlank()) {
-                println("Название архива должно состоять как минимум из одного символа помимо пробелов.\nПовторите ввод.")
+                println("Название архива должно состоять как минимум из одного символа.\nПовторите ввод.")
             } else {
                 archiveList.add(Archive(input, mutableListOf()))
                 println("Архив '$input' успешно добавлен.")
@@ -121,13 +121,13 @@ class ArchiveMenu(
         while (input.isBlank()) {
             input = readln()
             if (input.isBlank()) {
-                println("Название заметки должно состоять как минимум из одного символа помимо пробелов.\nПовторите ввод.")
+                println("Название заметки должно состоять как минимум из одного символа.\nПовторите ввод.")
             } else {
                 var input2 = ""
                 while (input2.isBlank()) {
                     println("Введите текст заметки:")
                     input2 = readln()
-                    if (input2.isBlank()) println("Текст заметки должен состоять как минимум из одного символа помимо пробелов.\nПовторите ввод.")
+                    if (input2.isBlank()) println("Текст заметки должен состоять как минимум из одного символа.\nПовторите ввод.")
                 }
                 archiveList[currentArchive].noteList.add(Note(input, input2))
                 println("Заметка '$input' успешно добавлена.")
